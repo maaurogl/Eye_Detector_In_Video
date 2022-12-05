@@ -1,0 +1,14 @@
+function [descriptor] = createDescriptor(I)
+%UNTITLED Summary of this function goes here
+%   Detailed explanation goes here
+%histograma = imhist(I);
+%[m,n] = size(histograma);
+%histograma = reshape(histograma,[n,m]);
+%gradiente = imgradient(I);
+[n m] = size(I)
+[featureVector,HOG] = extractHOGFeatures(I, 'CellSize', );
+plot(HOG);
+
+
+descriptor = featureVector;
+end
